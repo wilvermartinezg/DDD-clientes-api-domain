@@ -6,6 +6,4 @@ interface CustomerBalanceRepository {
 
     fun create(customerBalance: CustomerBalance)
 
-    fun update(customerBalance: CustomerBalance)
-
 }

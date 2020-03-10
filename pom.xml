@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>xyz.wilver</groupId>
-    <artifactId>clientes-api-domain</artifactId>
+    <artifactId>DDD-clientes-api-domain</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>clientes-api-domain</name>
+    <name>DDD-clientes-api-domain</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

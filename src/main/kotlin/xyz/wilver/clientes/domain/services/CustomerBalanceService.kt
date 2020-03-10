@@ -21,10 +21,7 @@ class CustomerBalanceService(private val customerBalanceRepository: CustomerBala
             throw UserInputValuesException(listOf(error))
         }
 
-        val balance = CustomerBalance(customerId).apply {
-            this.amount = amount
-            this.movementType = MovementType.CREDIT
-        }
+        val balance = CustomerBalance(customerId, amount, MovementType.CREDIT)
 
         customerBalanceRepository.create(balance)
     }
@@ -41,10 +38,7 @@ class CustomerBalanceService(private val customerBalanceRepository: CustomerBala
             throw UserInputValuesException(listOf(error))
         }
 
-        val balance = CustomerBalance(customerId).apply {
-            this.amount = amount.multiply(BigDecimal(-1))
-            this.movementType = MovementType.DEBIT
-        }
+        val balance = CustomerBalance(customerId, amount.multiply(BigDecimal(-1)), MovementType.DEBIT)
 
         customerBalanceRepository.create(balance)
     }
